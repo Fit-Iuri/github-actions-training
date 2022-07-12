@@ -36,3 +36,11 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/CachorroBank
           head: v99
+
+      - name: Run auto-merge-action
+        id: run-auto-merge-action-2
+        uses: yyoshiki41/auto-merge-action@v0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          base: whitelabel/testing
+          head: v99
