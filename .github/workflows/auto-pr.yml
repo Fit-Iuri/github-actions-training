@@ -34,5 +34,5 @@ jobs:
         uses: yyoshiki41/auto-merge-action@v0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          base: whitelabel/CachorroBank
+          base: [whitelabel/CachorroBank, whitelabel/testing]
           head: v99
