@@ -1,0 +1,38 @@
+# name: Demo to create automatic PR
+
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#     branches:
+#       - 'whitelabel/**'
+
+name: "[chore] Merge pull request from v99 to whitelabels"
+
+on:
+  push:
+    branches:
+      - "v99"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    name: "[chore] Merge pull request from v99 to whitelabels"
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Run auto-merge-action
+        id: run-auto-merge-action
+        uses: yyoshiki41/auto-merge-action@v0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          base: whitelabel/CachorroBank
+          head: v99
