@@ -19,7 +19,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  merge:
+  create-pr-on-push:
     name: "[chore] Merge pull request from v99 to whitelabels"
     runs-on: ubuntu-latest
     timeout-minutes: 8
