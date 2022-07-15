@@ -37,6 +37,7 @@ jobs:
           base: whitelabel/CachorroBank
           head: v99
           title: merge da V99 para CachorroBank
+          body: Realizando merge com alterações da V99
 
       - name: Run auto-merge-action Testing
         id: run-auto-merge-action-2
@@ -45,6 +46,8 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/testing
           head: v99
+          title: merge da V99 para Testing
+          body: Realizando merge com alterações da V99
 
       - name: Run auto-merge-action Banco Zap
         id: run-auto-merge-action-3
@@ -53,14 +56,18 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/BancoZap
           head: v99
+          title: merge da V99 para Banco Zap
+          body: Realizando merge com alterações da V99
 
-      - name: Run auto-merge-action Banco Zap
+      - name: Run auto-merge-action FeijaoBank
         id: run-auto-merge-action-4
         uses: Fit-Iuri/auto-merge-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/FeijaoBank
           head: v99
+          title: merge da V99 para FeijaoBank
+          body: Realizando merge com alterações da V99
 
       # - uses: actions/checkout@v99
       #   name: Checkout
