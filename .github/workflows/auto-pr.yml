@@ -1,0 +1,83 @@
+# name: Demo to create automatic PR
+
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#     branches:
+#       - 'whitelabel/**'
+
+name: "[chore] Merge pull request from v99 to whitelabels"
+
+on:
+  push:
+    branches:
+      - "v99"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-pr-on-push:
+    name: "Merge pull request from v99 to whitelabels"
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Run auto-merge-action Cachorro Bank
+        id: run-auto-merge-action
+        uses: Fit-Iuri/auto-merge-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          base: whitelabel/CachorroBank
+          head: v99
+
+      - name: Run auto-merge-action Testing
+        id: run-auto-merge-action-2
+        uses: Fit-Iuri/auto-merge-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          base: whitelabel/testing
+          head: v99
+
+      - name: Run auto-merge-action Banco Zap
+        id: run-auto-merge-action-3
+        uses: Fit-Iuri/auto-merge-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          base: whitelabel/BancoZap
+          head: v99
+
+      - name: Run auto-merge-action Banco Zap
+        id: run-auto-merge-action-4
+        uses: Fit-Iuri/auto-merge-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          base: whitelabel/FeijaoBank
+          head: v99
+
+      # - uses: actions/checkout@v99
+      #   name: Checkout
+      # - uses: ./.github/actions/pr-whitelabel
+      #   name: Run auto-merge-action Cachorro Bank
+      #    with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: whitelabel/CachorroBank
+      #     head: v99
+      # - uses: ./.github/actions/pr-whitelabel
+      #   name: Run auto-merge-action Testing
+      #    with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: whitelabel/testing
+      #     head: v99
+      # - uses: ./.github/actions/pr-whitelabel
+      #   name: Run auto-merge-action Banco Zap
+      #    with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: whitelabel/BancoZap
+      #     head: v99
