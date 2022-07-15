@@ -24,19 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-     - uses: actions/checkout@v1
-        name: My first step
-     - uses: ./.github/actions/pr-whitelabel
-        name: Run auto-merge-action
-        id: run-auto-merge-action
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          base: whitelabel/CachorroBank
-          head: v99
-     - uses: ./.github/actions/pr-whitelabel
-        name: Run auto-merge-action
-        id: run-auto-merge-action-2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          base: whitelabel/testing
-          head: v99
+      - uses: actions/checkout@master
+        name: Checkout
+      - uses: raquelhortab/hello_world_github_actions/.github/actions/automatic-tests@master
+        name: Test
