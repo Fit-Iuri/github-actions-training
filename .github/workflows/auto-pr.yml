@@ -31,7 +31,7 @@ jobs:
 
       - name: Run auto-merge-action Cachorro Bank
         id: run-auto-merge-action
-        uses: ./.github/actions/pr-whitelabel
+        uses: Fit-Iuri/auto-merge-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/CachorroBank
@@ -39,7 +39,7 @@ jobs:
 
       - name: Run auto-merge-action Testing
         id: run-auto-merge-action-2
-        uses: ./.github/actions/pr-whitelabel
+        uses: Fit-Iuri/auto-merge-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/testing
@@ -47,7 +47,7 @@ jobs:
 
       - name: Run auto-merge-action Banco Zap
         id: run-auto-merge-action-3
-        uses: ./.github/actions/pr-whitelabel
+        uses: Fit-Iuri/auto-merge-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/BancoZap
