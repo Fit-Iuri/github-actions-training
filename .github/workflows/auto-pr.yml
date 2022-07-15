@@ -31,7 +31,7 @@ jobs:
 
       - name: Run auto-merge-action
         id: run-auto-merge-action
-        uses: Fit-Iuri/auto-merge-action@v0.1
+        uses: Fit-Iuri/auto-merge-action
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/CachorroBank
