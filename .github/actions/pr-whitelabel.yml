@@ -18,7 +18,7 @@ inputs:
   title:
     description: "Title"
     required: false
-    default: "release: merge whitelabel da v99"
+    default: "release: merge ${{ inputs.base }} da ${{ inputs.head }}"
   body:
     description: "Body"
     required: false
