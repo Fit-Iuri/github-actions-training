@@ -25,20 +25,17 @@ jobs:
     timeout-minutes: 8
     steps:
      - uses: actions/checkout@v1
-     - name: My first step
-       uses: ./.github/actions/pr-whitelabel
-       
-      - name: Run auto-merge-action
+        name: My first step
+     - uses: ./.github/actions/pr-whitelabel
+        name: Run auto-merge-action
         id: run-auto-merge-action
-        uses: ./.github/actions/pr-whitelabel
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/CachorroBank
           head: v99
-
-      - name: Run auto-merge-action
+     - uses: ./.github/actions/pr-whitelabel
+        name: Run auto-merge-action
         id: run-auto-merge-action-2
-        uses: ./.github/actions/pr-whitelabel
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/testing
