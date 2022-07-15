@@ -23,16 +23,11 @@ jobs:
     name: "Merge pull request from v99 to whitelabels"
     runs-on: ubuntu-latest
     timeout-minutes: 8
-    # steps:
-    #   - name: Checkout
-    #     uses: actions/checkout@v3
-    #     with:
-    #       fetch-depth: 0
-    steps: 
+    steps:
      - uses: actions/checkout@v1
      - name: My first step
        uses: ./.github/actions/pr-whitelabel
-
+       
       - name: Run auto-merge-action
         id: run-auto-merge-action
         uses: ./.github/actions/pr-whitelabel
