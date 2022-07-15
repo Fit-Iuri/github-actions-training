@@ -10,7 +10,7 @@ export const Card: React.FC = () => {
   return (
     <div>
       <div>Card</div>
-      <div>Isso é um card</div>
+      <div className="simples-header">Isso é um card</div>
       <span>Imagem</span>
       <span>Texto</span>
     </div>
