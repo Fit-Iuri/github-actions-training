@@ -53,6 +53,14 @@ jobs:
           base: whitelabel/BancoZap
           head: v99
 
+      - name: Run auto-merge-action Banco Zap
+        id: run-auto-merge-action-4
+        uses: Fit-Iuri/auto-merge-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          base: whitelabel/FeijaoBank
+          head: v99
+
       # - uses: actions/checkout@v99
       #   name: Checkout
       # - uses: ./.github/actions/pr-whitelabel
