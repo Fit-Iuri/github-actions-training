@@ -7,7 +7,7 @@
 #     branches:
 #       - 'whitelabel/**'
 
-name: "[chore] Merge pull request from v99 to whitelabels"
+name: "[Release] Merge pull request from v99 to whitelabels"
 
 on:
   push:
