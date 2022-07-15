@@ -24,23 +24,52 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - uses: actions/checkout@master
-        name: Checkout
-      - uses: ./.github/actions/pr-whitelabel
-        name: Run auto-merge-action Cachorro Bank
-         with:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Run auto-merge-action Cachorro Bank
+        id: run-auto-merge-action
+        uses: ./.github/actions/pr-whitelabel
+        with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/CachorroBank
           head: v99
-      - uses: ./.github/actions/pr-whitelabel
-        name: Run auto-merge-action Testing
-         with:
+
+      - name: Run auto-merge-action Testing
+        id: run-auto-merge-action-2
+        uses: ./.github/actions/pr-whitelabel
+        with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/testing
           head: v99
-      - uses: ./.github/actions/pr-whitelabel
-        name: Run auto-merge-action Banco Zap
-         with:
+
+      - name: Run auto-merge-action Banco Zap
+        id: run-auto-merge-action-2
+        uses: ./.github/actions/pr-whitelabel
+        with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/BancoZap
           head: v99
+
+      # - uses: actions/checkout@v99
+      #   name: Checkout
+      # - uses: ./.github/actions/pr-whitelabel
+      #   name: Run auto-merge-action Cachorro Bank
+      #    with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: whitelabel/CachorroBank
+      #     head: v99
+      # - uses: ./.github/actions/pr-whitelabel
+      #   name: Run auto-merge-action Testing
+      #    with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: whitelabel/testing
+      #     head: v99
+      # - uses: ./.github/actions/pr-whitelabel
+      #   name: Run auto-merge-action Banco Zap
+      #    with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     base: whitelabel/BancoZap
+      #     head: v99
