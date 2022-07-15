@@ -36,6 +36,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           base: whitelabel/CachorroBank
           head: v99
+          title: merge da V99 para CachorroBank
 
       - name: Run auto-merge-action Testing
         id: run-auto-merge-action-2
