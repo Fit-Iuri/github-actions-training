@@ -46,7 +46,7 @@ jobs:
           head: v99
 
       - name: Run auto-merge-action Banco Zap
-        id: run-auto-merge-action-2
+        id: run-auto-merge-action-3
         uses: ./.github/actions/pr-whitelabel
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
