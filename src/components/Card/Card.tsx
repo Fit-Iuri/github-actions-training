@@ -11,7 +11,7 @@ export const Card: React.FC = () => {
     <div>
       <div>Card</div>
       <div>Isso é um card</div>
-      <div>Imagem</div>
+      <span>Imagem</span>
       <span>Texto</span>
     </div>
   );
