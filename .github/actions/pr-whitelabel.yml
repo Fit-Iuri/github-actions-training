@@ -18,7 +18,7 @@ inputs:
   title:
     description: "Title"
     required: false
-    default: "chore(auto-merge-action): merge automatically"
+    default: "release: merge ${{ inputs.base }} da ${{ inputs.head }}"
   body:
     description: "Body"
     required: false
