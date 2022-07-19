@@ -6,6 +6,7 @@ export const Search: React.FC = () => {
       <div>Search</div>
       <div>Buscando...</div>
       <div>Achou!!!!</div>
+      <div>Achou.</div>
     </div>
   );
 };
