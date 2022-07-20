@@ -18,7 +18,7 @@ jobs:
         with:
           source_folder: "*"
           destination_repo: "Fit-Iuri/actions-paste"
-          destination_base_branch: "main"
+          destination_base_branch: "v99"
           destination_head_branch: "v99"
           user_email: "iuri.mendes@fitbank.com.br"
           user_name: "Fit-Iuri"
