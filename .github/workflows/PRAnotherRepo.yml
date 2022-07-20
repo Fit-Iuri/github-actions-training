@@ -16,7 +16,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: "Fit-Iuri/github-actions-training/tree/v99"
+          source_folder: "Fit-Iuri/github-actions-training@v99"
           destination_repo: "Fit-Iuri/actions-paste"
           destination_base_branch: "main"
           destination_head_branch: "v99"
