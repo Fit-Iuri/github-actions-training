@@ -18,7 +18,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           source_folder: "*"
-          destination_repo: "Fit-Iuri/actions-paste"
+          destination_repo: "actions-paste"
           destination_base_branch: "v99"
           destination_head_branch: "v99"
           user_email: "iuri.mendes@fitbank.com.br"
