@@ -1,0 +1,24 @@
+name: Push File
+
+on: push
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Create pull request
+        uses: paygoc6/action-pull-request-another-repo@v1.0.1
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_folder: "Fit-Iuri/github-actions-training/tree/v99"
+          destination_repo: "Fit-Iuri/actions-paste"
+          destination_base_branch: "main"
+          destination_head_branch: "v99"
+          user_email: "iuri.mendes@fitbank.com.br"
+          user_name: "Fit-Iuri"
