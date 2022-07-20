@@ -13,12 +13,12 @@ jobs:
 
       - name: Create pull request
         uses: paygoc6/action-pull-request-another-repo@v1.0.1
-        # env:
-        #   API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
+        env:
+          #   API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+        with:
           source_folder: "*"
-          destination_repo: "actions-paste"
+          destination_repo: "Fit-Iuri/actions-paste"
           destination_base_branch: "v99"
           destination_head_branch: "v99"
           user_email: "iuri.mendes@fitbank.com.br"
