@@ -10,6 +10,8 @@ export const Slider: React.FC = () => {
       <span>Texto</span>
       <div>Imagem 2</div>
       <span>Texto 2</span>
+      <div>Imagem 3</div>
+      <span>Texto 3</span>
     </div>
   );
 };
