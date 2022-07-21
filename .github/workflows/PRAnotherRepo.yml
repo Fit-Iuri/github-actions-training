@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 0
 
       - name: Create pull request
-        uses: Fit-Iuri/PR-Another-Repo@main
+        uses: Fit-Iuri/action-pr-another-repo@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
