@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
     <div>
       <div>Footer</div>
       <div>ano</div>
-      <div>Arroz</div>
+      <div>Arroz.</div>
     </div>
   );
 };
