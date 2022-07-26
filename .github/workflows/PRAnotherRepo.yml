@@ -16,7 +16,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: "src"
+          source_folder: "*"
           destination_repo: "Fit-Iuri/actions-paste"
           destination_head_branch: "v99"
           user_email: "iuri.mendes@fitbank.com.br"
