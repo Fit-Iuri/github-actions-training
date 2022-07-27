@@ -1,4 +1,4 @@
-name: Push File
+name: PR File
 
 on: push
 
