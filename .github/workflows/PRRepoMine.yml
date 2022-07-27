@@ -1,4 +1,4 @@
-name: Push File
+name: Push File test
 
 on: push
 
@@ -14,10 +14,10 @@ jobs:
       - name: Create pull request
         uses: Fit-Iuri/action-pr-another-repo@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
-          source_folder: "*"
-          destination_repo: "Fit-Iuri/actions-paste"
-          destination_head_branch: "v99"
-          user_email: "iuri.mendes@fitbank.com.br"
-          user_name: "Fit-Iuri"
+          source-directory: "*"
+          destination-github-username: "Fit-Iuri"
+          destination-repository-name: "actions-paste"
+          user-email: "iuri.mendes@fitbank.com.br"
+          target-branch: v99
