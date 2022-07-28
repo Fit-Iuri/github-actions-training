@@ -2,9 +2,14 @@ name: PR File
 
 on:
   push:
-    paths: "*"
-    paths-ignore:
-      - ".github/**"
+    paths:
+      - "public/**"
+      - "src/**"
+      - "README.md"
+      - "index.html"
+      - "package.json"
+      - "tsconfig.json"
+      - "yarn.lock"
 
 jobs:
   pull-request:
