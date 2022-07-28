@@ -1,6 +1,10 @@
 name: PR File
 
-on: push
+on:
+  push:
+    paths: "*"
+    paths-ignore:
+      - ".github/**"
 
 jobs:
   pull-request:
