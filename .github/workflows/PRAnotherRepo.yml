@@ -28,7 +28,7 @@ jobs:
           user_name: "Fit-Iuri"
 
       - name: Create pull request actions-paste-2
-        uses: Fit-Iuri/action-pr-another-repo@main
+        uses: paygoc6/action-pull-request-another-repo@v1.0.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
