@@ -33,7 +33,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source_folder: "*"
-          destination_repo: "Fit-Iuri/actions-paste-2"
+          destination_repo: "Fit-Iuri/actions-paste-3"
           destination_head_branch: "v99"
           user_email: "iuri.mendes@fitbank.com.br"
           user_name: "Fit-Iuri"
