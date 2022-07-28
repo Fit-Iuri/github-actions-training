@@ -2,7 +2,6 @@ name: PR Original
 
 on:
   push:
-    paths: "*"
     paths-ignore:
       - ".github/**"
 
