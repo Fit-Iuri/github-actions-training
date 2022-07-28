@@ -26,3 +26,15 @@ jobs:
           destination_head_branch: "v99"
           user_email: "iuri.mendes@fitbank.com.br"
           user_name: "Fit-Iuri"
+
+      - name: Create pull request actions-paste-2
+        uses: Fit-Iuri/action-pr-another-repo@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_folder: "*"
+          destination_repo: "Fit-Iuri/actions-paste-2"
+          destination_head_branch: "features"
+          destination_base_branch: "v99"
+          user_email: "iuri.mendes@fitbank.com.br"
+          user_name: "Fit-Iuri"

@@ -6,7 +6,7 @@ export const Home: React.FC = () => {
       <div>Olá...</div>
       <div>Testando GitHub Actions.</div>
       <div>Home</div>
-      <div>Hora da verdade</div>
+      <div>Hora da verdade!</div>
     </div>
   );
 };
