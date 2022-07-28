@@ -2,6 +2,8 @@ name: PR Original
 
 on:
   push:
+    branches:
+      - v99
     paths-ignore:
       - ".github/**"
 
