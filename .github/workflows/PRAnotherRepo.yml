@@ -1,6 +1,9 @@
-name: Push File Original
+name: PR Original
 
-on: push
+on:
+  push:
+    paths-ignore:
+      - ".github/**"
 
 jobs:
   pull-request:
