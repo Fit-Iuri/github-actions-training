@@ -6,7 +6,7 @@ on:
       - "whitelabel/BancoZap"
 
 jobs:
-  push:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,9 +20,8 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: bancozap
-          destination-github-username: Fit-Iuri
-          destination-repository-name: bancozap
+          source-directory: "bancozap"
+          destination-github-username: "Fit-Iuri"
+          destination-repository-name: "bancozap"
           user-email: iuri.mendes@fitbank.com.br
-          commit-message: Copiando ORIGIN_COMMIT para $GITHUB_REF
           target-branch: main
