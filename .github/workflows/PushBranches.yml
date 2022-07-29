@@ -3,7 +3,7 @@ name: pushWhitelabels
 on:
   push:
     branches:
-      - whitelabel/BancoZap
+      - "whitelabel/BancoZap"
 
 jobs:
   push:
