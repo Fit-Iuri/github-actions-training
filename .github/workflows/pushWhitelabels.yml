@@ -2,19 +2,15 @@ name: pushWhitelabels
 
 on:
   push:
-    branches:
-      - whitelabel/BancoZap
+    branches: [whitelabel/BancoZap]
 
 jobs:
-  pull-request:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
+      - uses: actions/checkout@v2
       - name: Pushes to another repository
+        id: push_directory
         uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
