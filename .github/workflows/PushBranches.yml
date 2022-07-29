@@ -22,7 +22,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: "bancozap"
+          source-directory: "output"
           destination-github-username: "Fit-Iuri"
           destination-repository-name: "bancozap"
           user-email: iuri.mendes@fitbank.com.br
