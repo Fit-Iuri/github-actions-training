@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "whitelabel/BancoZap"
+      - v99
 
 jobs:
   build:
