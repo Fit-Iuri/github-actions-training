@@ -1,4 +1,4 @@
-name: CI
+name: pushWhitelabels
 
 on:
   push:
