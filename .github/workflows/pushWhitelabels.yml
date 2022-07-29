@@ -9,10 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container: pandoc/latex
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v2
       - name: Install mustache (to update the date)
         run: apk add ruby && gem install mustache
       - name: creates output
@@ -29,5 +26,5 @@ jobs:
           user-email: iuri.mendes@fitbank.com.br
           commit-message: Copiando ORIGIN_COMMIT para $GITHUB_REF
           target-branch: main
-      - name: Executando action push para outro repositório
+      - name: Test get variable exported by push-to-another-repository
         run: echo $DESTINATION_CLONED_DIRECTORY
