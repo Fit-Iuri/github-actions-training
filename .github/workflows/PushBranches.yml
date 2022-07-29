@@ -1,4 +1,4 @@
-name: pushWhitelabels
+name: Push Whitelabels
 
 on:
   push:
