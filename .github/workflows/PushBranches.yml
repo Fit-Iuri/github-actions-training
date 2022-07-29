@@ -2,7 +2,8 @@ name: pushWhitelabels
 
 on:
   push:
-    branches: [whitelabel/BancoZap]
+    branches:
+      - whitelabel/BancoZap
 
 jobs:
   build:
