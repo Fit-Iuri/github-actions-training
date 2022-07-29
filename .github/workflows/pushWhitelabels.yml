@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: whitelabel/BancoZap
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: pandoc/latex
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install mustache (to update the date)
+        run: apk add ruby && gem install mustache
+      - name: creates output
+        run: sh ./build.sh
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@ssh-deploy-key
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: output/
+          destination-github-username: "Fit-Iuri"
+          destination-repository-name: "bancozap"
+          user-email: iuri.mendes@fitbank.com.br
+          commit-message: Copiando ORIGIN_COMMIT para $GITHUB_REF
+          target-branch: main
+      - name: Executando action push para outro repositório
+        run: echo $DESTINATION_CLONED_DIRECTORY
