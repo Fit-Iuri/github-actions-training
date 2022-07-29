@@ -9,11 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     container: pandoc/latex
     steps:
-      - uses: actions/checkout@v2
-      - name: Install mustache (to update the date)
-        run: apk add ruby && gem install mustache
-      - name: creates output
-        run: sh ./build.sh
+      - name: Checkout
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
       - name: Pushes to another repository
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@ssh-deploy-key
@@ -26,5 +25,3 @@ jobs:
           user-email: iuri.mendes@fitbank.com.br
           commit-message: Copiando ORIGIN_COMMIT para $GITHUB_REF
           target-branch: main
-      - name: Test get variable exported by push-to-another-repository
-        run: echo $DESTINATION_CLONED_DIRECTORY
