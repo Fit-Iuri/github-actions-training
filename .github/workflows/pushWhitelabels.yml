@@ -2,10 +2,10 @@ name: CI
 
 on:
   push:
-    branches: [ whitelabel/BancoZap ]
+    branches: [whitelabel/BancoZap]
 
 jobs:
-  build:
+  push:
     runs-on: ubuntu-latest
     container: pandoc/latex
     steps:
