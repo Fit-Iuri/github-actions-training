@@ -18,8 +18,9 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: src/
+          source-directory: ./
           destination-github-username: "Fit-Iuri"
           destination-repository-name: "bancozap"
           user-email: iuri.mendes@fitbank.com.br
+          commit-message: Enviando ORIGIN_COMMIT de $GITHUB_REF
           target-branch: main
