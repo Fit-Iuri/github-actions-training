@@ -28,5 +28,5 @@ jobs:
           echo "ROOT"
           ls -la
           echo "CLONED REPO"
-          cd formulas-training
+          cd bancozap
           ls -la
