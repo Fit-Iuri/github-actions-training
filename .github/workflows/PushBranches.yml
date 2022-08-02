@@ -22,5 +22,5 @@ jobs:
           destination-github-username: "Fit-Iuri"
           destination-repository-name: "bancozap"
           user-email: iuri.mendes@fitbank.com.br
-          commit-message: Enviando ORIGIN_COMMIT de $GITHUB_REF
+          # commit-message: Enviando ORIGIN_COMMIT de $GITHUB_REF
           target-branch: main
