@@ -1,4 +1,4 @@
-name: Push Whitelabels
+name: Clone Private Repository Workflow
 
 on:
   push:
@@ -15,15 +15,18 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Pushes to another repository
-        id: push_directory
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+
+      - name: Clone Fit-Iuri/bancozap
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
-          source-directory: ./
-          destination-github-username: "Fit-Iuri"
-          destination-repository-name: "bancozap"
-          user-email: iuri.mendes@fitbank.com.br
-          commit-message: Enviando ORIGIN_COMMIT de $GITHUB_REF
-          target-branch: main
+          owner: "Fit-Iuri"
+          repository: "bancozap"
+          access-token: ${{ secrets.API_TOKEN_GITHUB }}
+
+      - name: Access cloned repository content
+        run: |
+          echo "ROOT"
+          ls -la
+          echo "CLONED REPO"
+          cd formulas-training
+          ls -la
