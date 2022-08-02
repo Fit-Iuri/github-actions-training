@@ -11,7 +11,10 @@ jobs:
   push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Pushes to another repository
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@main
@@ -22,5 +25,5 @@ jobs:
           destination-github-username: "Fit-Iuri"
           destination-repository-name: "bancozap"
           user-email: iuri.mendes@fitbank.com.br
-          # commit-message: Enviando ORIGIN_COMMIT de $GITHUB_REF
+          commit-message: Enviando ORIGIN_COMMIT de $GITHUB_REF
           target-branch: main
