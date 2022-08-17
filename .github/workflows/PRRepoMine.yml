@@ -19,7 +19,7 @@ jobs:
       - run: |
           git clone https://github.com/Fit-Iuri/actions-paste.git
       - run: |
-          gh pr create -base HEAD:main --head features
+          gh pr create --base main --head features
 
       # - name: Create pull request
       #   uses: Fit-Iuri/action-pr-another-repo@main
