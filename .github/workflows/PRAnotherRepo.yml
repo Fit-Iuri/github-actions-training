@@ -1,50 +1,50 @@
-name: PR Original
+# name: PR Original
 
-on:
-  push:
-    branches:
-      - v99
-    paths-ignore:
-      - ".github/**"
+# on:
+#   push:
+#     branches:
+#       - v99
+#     paths-ignore:
+#       - ".github/**"
 
-jobs:
-  pull-request:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+# jobs:
+#   pull-request:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0
 
-      - name: Create pull request
-        uses: paygoc6/action-pull-request-another-repo@v1.0.1
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_folder: "*"
-          destination_repo: "Fit-Iuri/actions-paste"
-          destination_head_branch: "v99"
-          user_email: "iuri.mendes@fitbank.com.br"
-          user_name: "Fit-Iuri"
+#       - name: Create pull request
+#         uses: paygoc6/action-pull-request-another-repo@v1.0.1
+#         env:
+#           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#         with:
+#           source_folder: "*"
+#           destination_repo: "Fit-Iuri/actions-paste"
+#           destination_head_branch: "v99"
+#           user_email: "iuri.mendes@fitbank.com.br"
+#           user_name: "Fit-Iuri"
 
-      # - name: Create pull request actions-paste-2
-      #   uses: paygoc6/action-pull-request-another-repo@v1.0.1
-      #   env:
-      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      #   with:
-      #     source_folder: "*"
-      #     destination_repo: "Fit-Iuri/actions-paste-3"
-      #     destination_head_branch: "v99"
-      #     user_email: "iuri.mendes@fitbank.com.br"
-      #     user_name: "Fit-Iuri"
+#       # - name: Create pull request actions-paste-2
+#       #   uses: paygoc6/action-pull-request-another-repo@v1.0.1
+#       #   env:
+#       #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#       #   with:
+#       #     source_folder: "*"
+#       #     destination_repo: "Fit-Iuri/actions-paste-3"
+#       #     destination_head_branch: "v99"
+#       #     user_email: "iuri.mendes@fitbank.com.br"
+#       #     user_name: "Fit-Iuri"
 
-      # - name: Create pull request actions-paste-3
-      #   uses: paygoc6/action-pull-request-another-repo@v1.0.1
-      #   env:
-      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      #   with:
-      #     source_folder: "*"
-      #     destination_repo: "Fit-Iuri/actions-paste-4"
-      #     destination_head_branch: "v99"
-      #     user_email: "iuri.mendes@fitbank.com.br"
-      #     user_name: "Fit-Iuri"
+#       # - name: Create pull request actions-paste-3
+#       #   uses: paygoc6/action-pull-request-another-repo@v1.0.1
+#       #   env:
+#       #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#       #   with:
+#       #     source_folder: "*"
+#       #     destination_repo: "Fit-Iuri/actions-paste-4"
+#       #     destination_head_branch: "v99"
+#       #     user_email: "iuri.mendes@fitbank.com.br"
+#       #     user_name: "Fit-Iuri"
