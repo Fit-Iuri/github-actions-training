@@ -21,7 +21,7 @@ jobs:
       - run: |
           git clone https://github.com/Fit-Iuri/actions-paste.git
       - run: |
-          git remote set-url origin https://x-access-token:${{ secrets.API_TOKEN_GITHUB }}@github.com/Fit-Iuri/actions-paste
+          echo ${{ secrets.API_TOKEN_GITHUB }} | gh auth login
           gh pr create --base main --head features
 
       # - name: Create pull request
