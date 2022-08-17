@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-        env:
-          GH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+          repository: Fit-Iuri/actions-paste
+          token: ${{ secrets.API_TOKEN_GITHUB }}
       - run: |
           git fetch
       - run: |
