@@ -22,7 +22,7 @@ jobs:
           git clone https://github.com/Fit-Iuri/actions-paste.git
       - run: |
           echo ${{ secrets.API_TOKEN_GITHUB }} | gh auth login
-          gh pr create --base main --head features
+          gh pr create --base main --head features --title main --body main
 
       # - name: Create pull request
       #   uses: Fit-Iuri/action-pr-another-repo@main
