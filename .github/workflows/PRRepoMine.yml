@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          repository: Fit-Iuri/actions-paste
           token: ${{ secrets.API_TOKEN_GITHUB }}
+          repository: Fit-Iuri/actions-paste
+          # fetch-depth: 0
       - run: |
           git fetch
       - run: |
