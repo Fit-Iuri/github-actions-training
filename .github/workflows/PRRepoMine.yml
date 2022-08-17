@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
         env:
-          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
+          GH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
       - run: |
           git fetch
       - run: |
