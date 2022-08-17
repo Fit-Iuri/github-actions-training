@@ -11,21 +11,25 @@ jobs:
   pull-request:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - run: |
+          git fetch
+      - run: |
+          git clone https://github.com/Fit-Iuri/actions-paste.git
+          gh pr create -B main \ -H features
 
-      - name: Create pull request
-        uses: Fit-Iuri/action-pr-another-repo@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_folder: "*"
-          destination_repo: "Fit-Iuri/actions-paste"
-          destination_head_branch: "v99"
-          user_email: "iuri.mendes@fitbank.com.br"
-          user_name: "Fit-Iuri"
+      # - name: Create pull request
+      #   uses: Fit-Iuri/action-pr-another-repo@main
+      #   env:
+      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      #   with:
+      #     source_folder: "*"
+      #     destination_repo: "Fit-Iuri/actions-paste"
+      #     destination_head_branch: "v99"
+      #     user_email: "iuri.mendes@fitbank.com.br"
+      #     user_name: "Fit-Iuri"
       # # Fit-Iuri/action-pull-request-another-repo@main
       # - name: Create pull request actions-paste-2
       #   uses: Fit-Iuri/action-pr-another-repo@main
