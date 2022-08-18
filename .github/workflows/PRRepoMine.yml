@@ -21,10 +21,13 @@ jobs:
       - run: |
           git clone https://github.com/Fit-Iuri/actions-paste.git
       - run: |
+          cd actions-paste
+      - run: |
           echo ${{ secrets.API_TOKEN_GITHUB }} | gh auth login
           git checkout -b features
           git add .
           git commmit -m "Arquivos"
+          git push -u origin HEAD:features
           gh pr create --base main --head features --title main --body main
 
       # - name: Create pull request
